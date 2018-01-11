@@ -10,17 +10,17 @@ class Squares
   end
 
   def square_of_sum
-    range.sum**2
+    (double_sum_of_range / 2)**2
   end
 
   def sum_of_squares
-    range.map { |num| num**2 }.sum
+    double_sum_of_range * (2 * number + 1) / 6
   end
 
   private
 
-  def range
-    0.upto(number)
+  def double_sum_of_range
+    number * (number + 1)
   end
 end
 
